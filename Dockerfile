@@ -5,7 +5,7 @@ MAINTAINER "jaya@yahoo.com"
 #RUN sed -i  's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-*  &&  \
 #    sed -i  's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g'  /etc/yum.repos.d/CentOS-*
 
-RUN yum install java-devel net-tool netstat vim bind-utils procps -y
+RUN dnf install java-17-openjdk java-17-openjdk-devel  -y
 
 COPY Dockerfile  /root/
 
